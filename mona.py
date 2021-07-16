@@ -11650,7 +11650,7 @@ def doManageBpOnFunc(modulecriteria,criteria,funcfilter,mode="add",type="export"
 	return
 
 def getAbsolutePath(filename):
-	if os.path.isabs(filename):
+	if os.path.isabs(filename) or filename == "":
 		return filename
 	else:
 		# unfortunately this is code-duplication from MnLog()
